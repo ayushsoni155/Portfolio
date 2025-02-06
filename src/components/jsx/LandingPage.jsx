@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // Import social media icons
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"; // Import social media icons
 import "../css/LandingPage.css"; // Importing the CSS file
 
 export default function LandingPage() {
@@ -19,14 +19,14 @@ export default function LandingPage() {
 
         {/* Social Media Icons */}
         <div className="socialIcons">
-          <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/ayushsoni155" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/ayush-soni-9b2583239" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
-            <FaTwitter />
+          <a href="https://www.instagram.com/ayushsoni.155" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
           </a>
         </div>
       </div>
