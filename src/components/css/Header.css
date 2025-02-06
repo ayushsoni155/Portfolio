@@ -1,0 +1,208 @@
+/* General Header Styling */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index:9999;
+  /* background-color:white; */
+  color: rgb(24, 24, 24);
+  /* border-bottom: 1px solid crimson; */
+  box-shadow: 0px 1px 4px rgba(24, 24, 24, 0.4);
+  padding: 10px 20px;
+}
+.admin-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* Logo Section */
+/* .logo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+} */
+
+/* .logo h2 {
+  margin: 0;
+  font-size: 24px;
+} */
+
+/* Desktop Navbar */
+.desktop-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav ul li {
+  margin: 0 15px;
+}
+
+/* .desktop-nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.desktop-nav ul li a:hover {
+  color: rgba(220, 20, 60, 0.8);
+} */
+.desktop-nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+.desktop-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjusts the underline position */
+  width: 100%;
+  height: 2px;
+  background-color: crimson; /* Crimson */
+  transform: scaleX(0); /* Hidden by default */
+  transition: transform 0.3s ease-in-out;
+}
+
+.desktop-nav ul li a:hover {
+  color: crimson;
+}
+
+.desktop-nav ul li a:hover::after {
+  transform: scaleX(1); 
+}
+
+/* Menu Icon (for small screens) */
+.menu-icon {
+  font-size: 28px;
+  color: rgb(24, 24, 24);
+  cursor: pointer;
+  display: none; /* Hide by default */
+  
+}
+.menu-iconOpen{
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+/* Side Navbar (for small screens) */
+.side-nav {
+  display: none;
+  position: fixed;
+  right: -2250px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: #4d97e1; */
+  background-color: rgb(217, 40, 67);
+  
+  color: white;
+  transition: 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: -999;
+}
+
+.side-nav.open {
+  right: 0;
+ display: flex;
+ align-items: flex-end;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  padding: 15px 0px;
+
+}
+
+/* .side-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: bold;
+  display: block;
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.side-nav ul li a:hover {
+  color: rgba(220, 20, 60, 0.6);
+} */
+.side-nav ul li a {
+  color: rgb(24, 24, 24);
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: bold;
+  display: block;
+  text-align: right;
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+  padding-bottom: 5px; /* Adds space for underline */
+}
+
+.side-nav ul li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%; /* Hidden by default */
+  height: 3px;
+  background-color:  white; /* Crimson */
+  transition: width 0.3s ease-in-out;
+}
+
+.side-nav ul li a:hover {
+  /* color: crimson; */
+     color: white
+}
+
+.side-nav ul li a:hover::after {
+  width: 100%; /* Expands on hover */
+}
+
+/* Overlay */
+/* .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  display: block;
+} */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon */
+  }
+
+  .desktop-nav {
+    display: none; /* Hide desktop navbar */
+  }
+
+  .side-nav {
+    display: block; /* Enable side menu */
+  }
+}

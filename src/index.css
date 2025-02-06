@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap');
+
+*{
+  font-family: 'Sour Gummy', cursive;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+ 
+ 
+
+}
+body{
+ background-color: rgb(255, 255, 255);
+}

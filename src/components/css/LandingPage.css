@@ -1,0 +1,115 @@
+/* Landing Page Container */
+.landingPageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    height: 100vh;
+    text-align: center;
+    background: white;
+    padding: 20px;
+}
+
+/* Shape & Image */
+.shapeContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Irregular Shape with Animation */
+.irregularShape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(220, 20, 60, 0.8); /* Crimson */
+    border-radius:31% 69% 51% 49% / 65% 67% 33% 35%  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+
+
+}
+/* Profile Image */
+.profileImage {
+    width: 100%;
+    height: 100%;
+    scale: 1.29;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    top: -42px;
+    
+}
+
+/* Text Section */
+.landingText {
+    margin-top: 20px;
+}
+
+.landingText h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+}
+
+.landingText p {
+    font-size: 38px;
+    font-weight: bold;
+    color: crimson;
+}
+
+.landingText span {
+    color: black;
+}
+
+#portred {
+    color: crimson;
+}
+
+/* Social Media Icons */
+.socialIcons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socialIcons a {
+    color: black;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+    color: rgba(220, 20, 60, 0.8);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .landingPageContainer {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .shapeContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .landingText h2 {
+        font-size: 34px;
+    }
+
+    .landingText p {
+        font-size: 30px;
+    }
+
+    .socialIcons a {
+        font-size: 30px;
+    }
+}
