@@ -1,0 +1,63 @@
+/* Footer Styling */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+}
+.FooterName{
+    font-weight: bold;
+    color:  #E57373;
+}
+/* Footer Icons */
+.footerIcons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footerIcons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footerIcons a:hover {
+    transform: scale(1.2);
+    color: crimson;
+}
+
+/* Smooth Entrance Animation */
+.fadeIn {
+    opacity: 0;
+    animation: fadeInAnim 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAnim {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+    
+    .footerIcons a {
+        font-size: 20px;
+    }
+}

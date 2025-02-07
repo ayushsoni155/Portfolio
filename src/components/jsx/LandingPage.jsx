@@ -1,6 +1,6 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa"; // Import social media icons
-import "../css/LandingPage.css"; // Importing the CSS file
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import "../css/LandingPage.css";
 
 export default function LandingPage() {
   return (
@@ -14,8 +14,16 @@ export default function LandingPage() {
 
       {/* Text Section */}
       <div className="landingText">
-        <h2>Welcome to <span id="portred">My Portfolio</span></h2>
-        <p>Myself <span>Ayush Soni</span></p>
+        <h2>
+          Hello, I'm <span id="portred">Ayush Soni</span>
+        </h2>
+        <p>
+  A Passionate <span className="highlight">Full-Stack Developer</span> Crafting Digital Experiences.
+</p>
+<p>
+  Building Scalable and Interactive Web Applications.
+</p>
+
 
         {/* Social Media Icons */}
         <div className="socialIcons">
