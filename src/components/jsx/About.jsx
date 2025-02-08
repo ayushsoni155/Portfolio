@@ -22,7 +22,7 @@ I’m always up for <b>learning new things and challenging myself.</b> My goal i
         <h2>Education</h2>
         <div className="edu-item">
           <h3>B.Tech in Computer Science and engineering</h3>
-          <p>Mahakal Institute of Technology (2022-2026)</p>
+          <p>Mahakal Institute of Technology, Ujjain-(M.P)<br/> 2022-2026</p>
         </div>
         <div className="edu-item">
           <h3>Higher Secondary (M.P-Board)</h3>
