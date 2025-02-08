@@ -51,7 +51,7 @@ const Header = () => {
           <nav className="desktop-nav">
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/Order" onClick={handleLinkClick}>About</Link></li>
+              <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
               <li><Link to="/Sales" onClick={handleLinkClick}>Skills</Link></li>
               <li><Link to="/User" onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>
@@ -65,7 +65,7 @@ const Header = () => {
           <nav className={`side-nav ${isMenuOpen ? "open" : ""}`}>
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/Order" onClick={handleLinkClick}>About</Link></li>
+              <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
               <li><Link to="/Sales" onClick={handleLinkClick}>Skills</Link></li>
               <li><Link to="/User" onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>

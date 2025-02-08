@@ -27,7 +27,7 @@
 .highlight {
     font-weight: bold;
     color: black;
-    padding: 2px 6px;
+    padding: 0px 4  px;
     display: inline-block;
     transform: rotate(-1deg);
     position: relative;
@@ -49,7 +49,9 @@
     
     transform: scaleX(0); /* Start with no width */
     transform-origin: left;
+   
     animation: highlightFadeIn 1.2s ease-out forwards;
+    animation-delay: 1s;
 }
 
 /* Animation Keyframes */
@@ -128,6 +130,7 @@
 
 .landingText h2 span {
     color: #E57373; /* Lighter Crimson */
+    text-decoration:underline;
 }
 
 .landingText p {

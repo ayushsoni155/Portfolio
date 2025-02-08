@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin,FaEnvelope } from "react-icons/fa";
 import "../css/LandingPage.css";
 
 export default function LandingPage() {
@@ -33,6 +33,9 @@ export default function LandingPage() {
           <a href="https://linkedin.com/in/ayush-soni-9b2583239" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
+          <a href="mailto:ayushsoni6997@gmail.com">
+    <FaEnvelope />  {/* Email Icon */}
+  </a>
           <a href="https://www.instagram.com/ayushsoni.155" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>

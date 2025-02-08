@@ -1,0 +1,98 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 15px;
+    min-height: 100vh;
+    background: #f9f9f9;
+  }
+  #mainName{
+    color: #E57373;
+  }
+  #temp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* Profile Section */
+  .profile-card {
+    text-align: center;
+    background: white;
+    
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* max-width: 500px; */
+  }
+  .profile-card p{
+    text-align: left;
+
+  }
+  
+  .profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Education Section */
+  .education {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .edu-item {
+    margin-bottom: 10px;
+  }
+  
+  /* Hobbies Section */
+  .hobbies {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .hobby-item {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .profile-card{
+      width: 50%;
+    }
+   
+    /* .profile-card{
+        margin-top: 50px;
+    } */
+  }
+  
