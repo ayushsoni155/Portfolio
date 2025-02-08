@@ -52,7 +52,7 @@ const Header = () => {
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
               <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
-              <li><Link to="/Sales" onClick={handleLinkClick}>Skills</Link></li>
+              <li><Link to="/Skills" onClick={handleLinkClick}>Skills</Link></li>
               <li><Link to="/User" onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>
               <li><Link to="/Product" onClick={handleLinkClick}>CV</Link></li>
@@ -66,7 +66,7 @@ const Header = () => {
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
               <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
-              <li><Link to="/Sales" onClick={handleLinkClick}>Skills</Link></li>
+              <li><Link to="/Skills" onClick={handleLinkClick}>Skills</Link></li>
               <li><Link to="/User" onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>
               <li><Link to="/Product" onClick={handleLinkClick}>CV</Link></li>
