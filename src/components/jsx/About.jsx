@@ -41,13 +41,13 @@ I’m always up for <b>learning new things and challenging myself.</b> My goal i
       <div className="hobbies">
         <h2>Hobbies</h2>
         <div className="hobby-list">
-          <div className="hobby-item">💪 Gym Training</div>
-          <div className="hobby-item">💻 Coding & Development</div>
-          <div className="hobby-item">🎧🎶 Listening To Music  </div>
-          <div className="hobby-item">🎬 Watching Movie</div>
+        <div className="gym">💪 Gym Training</div>
+        <div className="coding">💻 Coding & Development</div>
+        <div className="music">🎧🎶 Listening To Music</div>
+        <div className="movie">🎬 Watching Movie</div>
         </div>
       </div>
-      </div>
+      </div> 
 
     </div>
   );

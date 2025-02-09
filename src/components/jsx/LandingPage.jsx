@@ -1,8 +1,8 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin,FaEnvelope } from "react-icons/fa";
 import "../css/LandingPage.css";
-
+import { useNavigate } from "react-router-dom";
 export default function LandingPage() {
+  const navigate = useNavigate();
   return (
     <div className="landingPageContainer">
       {/* Irregular Shape with Image */}
@@ -18,29 +18,17 @@ export default function LandingPage() {
           Hello, I'm <span id="portred">Ayush Soni</span>
         </h2>
         <p>
-  A Passionate <span className="highlight">Full-Stack Developer</span> Crafting Digital Experiences.
-</p>
-<p>
-  Building Scalable and Interactive Web Applications.
-</p>
+          A Passionate <span className="highlight">Full-Stack Developer</span> Crafting Digital Experiences.
+        </p>
+        <p>Building Scalable and Interactive Web Applications.</p>
+        
+        {/* "About Me" Button */}
+        <button className="aboutMeBtn" onClick={() => navigate("/About")}>
+      More about Me
+    </button>
 
-
-        {/* Social Media Icons */}
-        <div className="socialIcons">
-          <a href="https://github.com/ayushsoni155" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/ayush-soni-9b2583239" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="mailto:ayushsoni6997@gmail.com">
-    <FaEnvelope />  {/* Email Icon */}
-  </a>
-          <a href="https://www.instagram.com/ayushsoni.155" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-        </div>
       </div>
-    </div>
+          </div>
+
   );
 }

@@ -64,7 +64,10 @@
     max-width: 500px;
     text-align: center;
   }
-  
+  .gym { background-color: #FF4500; } /* Orange Red */
+          .coding { background-color: #1E90FF; } /* Dodger Blue */
+          .music { background-color: #8A2BE2; } /* Blue Violet */
+          .movie { background-color: #2E8B57; } /* Sea Green */
   .hobby-list {
     display: flex;
     flex-wrap: wrap;
@@ -72,8 +75,7 @@
     justify-content: center;
   }
   
-  .hobby-item {
-    background: #ff6b6b;
+  .hobby-list div{
     color: white;
     padding: 8px 15px;
     border-radius: 20px;

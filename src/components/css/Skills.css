@@ -24,15 +24,64 @@
 
 /* Centering text section */
 .sectionSkillText {
+    /* padding: 20px 40px; */
+    border-radius: 10px;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.skills-text
+{
     background: white;
-    padding: 20px 40px;
+    padding: 20px 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
-    text-align: left;
-}
-
+    text-align: center;
+  }
+  .skills-list{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .problem-solving { background-color: #FFD700; color: black; } /* Gold */
+  .teamwork { background-color: #008080; } /* Teal */
+  .communication { background-color: #FF5733; } /* Red-Orange */
+  .time-management { background-color: #6A0DAD; } /* Purple */
+  .adaptability { background-color: #228B22; } /* Forest Green */
+  
+  .skills-list div {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    
+    font-weight: bold;
+    
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  .c 
+  {
+     background-color: #A8B9CC; 
+    }
+  .cpp { background-color: #00599C; }
+  .html { background-color: #E34F26; }
+  .css { background-color: #1572B6; }
+  .bootstrap { background-color: #7952B3; }
+  .js { background-color: #F7DF1E; color: black; }
+  .java { background-color: #007396; }
+  .react { background-color: #61DAFB; color: black; }
+  .express { background-color: #444; }
+  .node { background-color: #339933; }
+  .mysql { background-color: #4479A1; }
+  .dbms { background-color: #FF9900; }
 /* Skills Animation Container */
 .skills-container {
     position: relative;
