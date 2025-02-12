@@ -8,6 +8,7 @@ const About = () => {
       <div className="profile-card">
         <img src="./ayushImg.jpg" alt="Profile" className="profile-img" />
         <h2 id="mainName">Ayush Soni</h2>
+        <br />
         <p>
         I'm <b>Ayush Soni</b>, <b>from Dewas</b>. I come from a supportive family—my father, <b>Yogesh Soni</b>, works in a private company, and my mother, <b>Arti Soni</b>, is a teacher.
 
@@ -20,6 +21,7 @@ I’m always up for <b>learning new things and challenging myself.</b> My goal i
       <div id="temp">      {/* Education Section */}
       <div className="education">
         <h2>Education</h2>
+        <br />
         <div className="edu-item">
           <h3>B.Tech in Computer Science and engineering</h3>
           <p>Mahakal Institute of Technology,Ujjain-(M.P)<br/>
@@ -40,6 +42,7 @@ I’m always up for <b>learning new things and challenging myself.</b> My goal i
       {/* Hobbies Section */}
       <div className="hobbies">
         <h2>Hobbies</h2>
+        <br />
         <div className="hobby-list">
         <div className="gym">💪 Gym Training</div>
         <div className="coding">💻 Coding & Development</div>

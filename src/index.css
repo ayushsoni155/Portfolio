@@ -10,5 +10,11 @@
 
 }
 body{
- background-color: rgba(255, 255, 255, 0.603);
+  /* background: #f9f4ee;  */
+  /* background: linear-gradient(to bottom, #ffffff, #f5efe7); */
+  background: #f5efe7;
+  /* color: black; */
+  /* font-family: "Poppins", sans-serif; */
+  background-image: radial-gradient(circle, rgba(219, 218, 218, 0.497) 2px, transparent 1px);
+  background-size: 20px 20px;
 }

@@ -4,6 +4,7 @@ import LandingPage from "./components/jsx/LandingPage";
 import Footer from "./components/jsx/Footer";
 import About from "./components/jsx/About";
 import Skills from "./components/jsx/Skills";
+import Project from "./components/jsx/Project";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
             <Route path="/" element={<LandingPage/>} />
             <Route path="/About" element={<About/>}/>
             <Route path="/Skills" element={<Skills/>}/>
+            <Route path="/Project" element={<Project/>}/>
           </Routes>
           <Footer/>
         </Router>
