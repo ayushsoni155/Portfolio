@@ -26,7 +26,7 @@ const projects = [
     {
         title: "Weather Forecast App",
         description: "A weather forecasting application that provides real-time weather updates, including temperature, humidity, and wind speed, using OpenWeatherMap API.",
-        image: "weather-forcast.png",
+        image: "Weather-forcastSS.png",
         link: "https://weather-forcast-murex.vercel.app/",
         technologies: ["React", "OpenWeatherMap API", "CSS", "JavaScript"]
     }
