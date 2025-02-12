@@ -7,28 +7,28 @@ const projects = [
         description: "An eCommerce platform for engineering students to access subject notes, buy practical files, and explore free courses with a seamless user experience.",
         image: "bytewiseSS.png",
         link: "https://bytewise24.vercel.app/",
-        technologies: ["React", "Express.js", "MySQL", "Razorpay", "AWS RDS", "Vercel"]
+        technologies: ["React", "Express.js", "CSS", "HTML", "MySQL", "Razorpay", "AWS RDS", "Vercel"]
     },
     {
         title: "ByteWise - Admin Panel",
         description: "An admin dashboard for managing students, orders, products, and courses on the ByteWise eCommerce platform, providing an intuitive interface for administrators.",
         image: "adminBytewiseSS.png",
         link: "https://admin-bytewise24.vercel.app/",
-        technologies: ["React", "Express.js", "MySQL", "Razorpay", "AWS RDS", "Vercel"]
+        technologies: ["React", "Express.js", "CSS", "HTML", "MySQL", "Razorpay", "AWS RDS", "Vercel"]
     },
-    {
-        title: "EmoChat - AI Chat App",
-        description: "An AI-powered real-time chat application that detects user emotions via the front camera and dynamically changes the chat background based on mood.",
-        image: "emochat.png",
-        link: "#",
-        technologies: ["React", "Java", "WebRTC", "AI", "Socket.io", "MySQL"]
-    },
+    // {
+    //     title: "EmoChat - AI Chat App",
+    //     description: "An AI-powered real-time chat application that detects user emotions via the front camera and dynamically changes the chat background based on mood.",
+    //     image: "emochat.png",
+    //     link: "#",
+    //     technologies: ["React", "Java", "WebRTC", "AI", "Socket.io", "MySQL"]
+    // },
     {
         title: "Weather Forecast App",
         description: "A weather forecasting application that provides real-time weather updates, including temperature, humidity, and wind speed, using OpenWeatherMap API.",
         image: "Weather-forcastSS.png",
         link: "https://weather-forcast-murex.vercel.app/",
-        technologies: ["React", "OpenWeatherMap API", "CSS", "JavaScript"]
+        technologies: ["React", "OpenWeatherMap API", "CSS", "HTML","Vercel"]
     }
 ];
 
@@ -46,20 +46,21 @@ const offers = [
 
 const getTechColor = (tech) => {
     const colors = {
-        "React": "#61DBFB",
-        "Express.js": "#000000",
-        "MySQL": "#00758F",
-        "Razorpay": "#0645AD",
-        "AWS RDS": "#FF9900",
-        "Vercel": "#000000",
-        "Java": "#F89820",
-        "WebRTC": "#D04A02",
-        "AI": "#FFD700",
-        "Socket.io": "#010101",
-        "OpenWeatherMap API": "#FF4500",
-        "CSS": "#1572B6",
-        "JavaScript": "#F7DF1E"
-    };
+            "React": "#61DBFB",
+            "Express.js": "#000000",
+            "MySQL": "#00758F",
+            "Razorpay": "#0645AD",
+            "AWS RDS": "#FF9900",
+            "Vercel": "#000000",
+            "Java": "#F89820",
+            "WebRTC": "#D04A02",
+            "AI": "#FFD700",
+            "Socket.io": "#010101",
+            "OpenWeatherMap API": "#FF4500",
+            "CSS": "#1572B6",
+            "JavaScript": "#F7DF1E",
+            "HTML": "#E34F26"
+        };
     return colors[tech] || "#888888";
 };
 
@@ -70,7 +71,8 @@ const Project = () => {
             <div className="grid-container">
                 {projects.map((project, index) => (
                     <div className="card" key={index}>
-                        <img src={project.image} alt={project.title} />
+                        <img src={project.image} data-src={project.image}  loading="lazy" alt={project.title} />
+                        {/* <img src={project.image} alt={project.title} /> */}
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
                         <div className="tech-stack">
@@ -90,7 +92,9 @@ const Project = () => {
             <div className="grid-container">
                 {certificates.map((cert, index) => (
                     <div className="card" key={index}>
-                        <img src={cert.image} alt={cert.title} />
+                    <img src={cert.image} data-src={cert.image}  loading="lazy" alt={cert.title} />
+
+                        {/* <img src={cert.image} alt={cert.title} /> */}
                         <h3>{cert.title}</h3>
                         <a href={cert.link} target="_blank" rel="noopener noreferrer">View Certificate</a>
                     </div>
@@ -102,7 +106,9 @@ const Project = () => {
             <div className="grid-container">
                 {offers.map((offer, index) => (
                     <div className="card offer-card" key={index}>
-                        <img src={offer.image} alt={offer.title} />
+                         <img src={offer.image} data-src={offer.image}  loading="lazy" alt={offer.title} />
+
+                        {/* <img src={offer.image} alt={offer.title} /> */}
                         <h3>{offer.title}</h3>
                         <a href={offer.link} target="_blank" rel="noopener noreferrer">View Offer</a>
                     </div>
