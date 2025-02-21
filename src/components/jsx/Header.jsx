@@ -1,75 +1,87 @@
 import React, { useState, useEffect } from "react";
-import "../css/Header.css"; // Importing the CSS file
-import { FaBars } from "react-icons/fa"; // Importing the Font Awesome icon
+import "../css/Header.css";
+import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaFileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        document.querySelector("header").classList.add("scrolled");
+      } else {
+        document.querySelector("header").classList.remove("scrolled");
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
   // Detect screen size change
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-      if (window.innerWidth > 768) {
-        setIsMenuOpen(false); // Close menu on larger screens
-      }
+      const smallScreen = window.innerWidth <= 768;
+      setIsSmallScreen(smallScreen);
+      if (!smallScreen) setIsMenuOpen(false);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Toggle the side navigation menu
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  // Toggle menu
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Close menu and scroll to top when a link is clicked
+  // Close menu and scroll to top
   const handleLinkClick = () => {
     setIsMenuOpen(false);
-    window.scrollTo(0, 0); // Scrolls to the top of the page
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <header>
       <div className="admin-navbar">
-        {/* Logo
+        {/* Logo */}
         <div className="logo">
-          <h2>My Website</h2>
-        </div> */}
+          <Link to="/" onClick={handleLinkClick}>
+            <h2>Ayush Soni</h2>
+          </Link>
+        </div>
 
-        {/* Small screen: Menu icon */}
+        {/* Menu Icon for Small Screens */}
         {isSmallScreen && (
-          <div className={isMenuOpen?"menu-iconOpen":"menu-icon"} onClick={toggleMenu}>
-            {isMenuOpen?"X":<FaBars />}
+          <div className="menu-icon" onClick={toggleMenu}>
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
           </div>
         )}
 
-        {/* Large screen: Normal Navbar */}
+        {/* Desktop Navigation */}
         {!isSmallScreen && (
           <nav className="desktop-nav">
             <ul>
-              <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
-              <li><Link to="/Skills" onClick={handleLinkClick}>Skills</Link></li>
-              <li><Link to="/Project" onClick={handleLinkClick}>Projects</Link></li>
-              <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>
-              <li><Link to="/Product" onClick={handleLinkClick}>CV</Link></li>
+              <li><Link to="/" onClick={handleLinkClick}><FaHome className="nav-icon" /> Home</Link></li>
+              <li><Link to="/About" onClick={handleLinkClick}><FaUser className="nav-icon" /> About</Link></li>
+              <li><Link to="/Skills" onClick={handleLinkClick}><FaCode className="nav-icon" /> Skills</Link></li>
+              <li><Link to="/Project" onClick={handleLinkClick}><FaProjectDiagram className="nav-icon" /> Projects</Link></li>
+              <li><Link to="/Contact" onClick={handleLinkClick}><FaEnvelope className="nav-icon" /> Contacts</Link></li>
+              <li><Link to="/Product" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
             </ul>
           </nav>
         )}
 
-        {/* Small screen: Side Navbar */}
+        {/* Side Navigation for Small Screens */}
         {isSmallScreen && (
           <nav className={`side-nav ${isMenuOpen ? "open" : ""}`}>
             <ul>
-              <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/About" onClick={handleLinkClick}>About</Link></li>
-              <li><Link to="/Skills" onClick={handleLinkClick}>Skills</Link></li>
-              <li><Link to="/Project" onClick={handleLinkClick}>Projects</Link></li>
-              <li><Link to="/Feedback" onClick={handleLinkClick}>Contacts</Link></li>
-              <li><Link to="/Product" onClick={handleLinkClick}>CV</Link></li>
+              <li><Link to="/" onClick={handleLinkClick}><FaHome className="nav-icon" /> Home</Link></li>
+              <li><Link to="/About" onClick={handleLinkClick}><FaUser className="nav-icon" /> About</Link></li>
+              <li><Link to="/Skills" onClick={handleLinkClick}><FaCode className="nav-icon" /> Skills</Link></li>
+              <li><Link to="/Project" onClick={handleLinkClick}><FaProjectDiagram className="nav-icon" /> Projects</Link></li>
+              <li><Link to="/Contact" onClick={handleLinkClick}><FaEnvelope className="nav-icon" /> Contacts</Link></li>
+              <li><Link to="/Product" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
             </ul>
           </nav>
         )}

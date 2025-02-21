@@ -4,214 +4,238 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-top: 60px;
     gap: 50px;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     padding: 20px;
     transition: all 0.5s ease-in-out;
-}
-/* Highlighter Pen Effect */
-/* .highlight {
+    overflow: hidden;
+  }
+  
+  /* Highlighter Effect */
+  .highlight {
     font-weight: bold;
-    color: black;
-    background: linear-gradient(120deg, rgba(255, 235, 59, 0.8) 0%, rgba(255, 235, 59, 0.8) 100%);
-    padding: 2px 6px;
+    color: #000;
+    padding: 0 4px;
     display: inline-block;
-    transform: rotate(-1deg);
-    box-shadow: inset 0 -4px rgba(255, 193, 7, 0.5);
-    border-radius: 4px;
-} */
-
-/* Highlighter Effect */
-.highlight {
-    font-weight: bold;
-    color: black;
-    padding: 0px 4  px;
-    display: inline-block;
-    transform: rotate(-1deg);
     position: relative;
-    border-radius: 4px;
-}
-
-/* Animated Background Effect */
-.highlight::before {
+    z-index: 1;
+  }
+  
+  .highlight::before {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 235, 59, 0.8); /* Yellow highlighter */
+    background: rgba(255, 235, 59, 0.8);
     box-shadow: inset 0 -4px rgba(255, 193, 7, 0.5);
     border-radius: 4px;
-    z-index: -1; /* Send it behind the text */
-    
-    transform: scaleX(0); /* Start with no width */
+    z-index: -1;
+    transform: scaleX(0);
     transform-origin: left;
-   
     animation: highlightFadeIn 1.2s ease-out forwards;
     animation-delay: 1s;
-}
-
-/* Animation Keyframes */
-@keyframes highlightFadeIn {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-/* Shape & Image */
-.shapeContainer {
+  }
+  
+  @keyframes highlightFadeIn {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  
+  /* Shape & Image */
+  .shapeContainer {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Irregular Shape with Animation */
-.irregularShape {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .irregularShape {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(229, 115, 115, 0.8); /* Lighter Crimson */
+    background: rgba(229, 115, 115, 0.8);
     border-radius: 31% 69% 51% 49% / 65% 67% 33% 35%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-
-    /* Glowing Effect */
-    box-shadow: 0px 0px 15px rgba(229, 115, 115, 0.8), 
-                0px 0px 30px rgba(229, 115, 115, 0.6),
-                0px 0px 50px rgba(229, 115, 115, 0.4);
-    margin-bottom: 20px;
-}
-
-/* Hover Effect - Enhances Glow */
-.irregularShape:hover {
-    transform: scale(1.08);
-
-    /* Stronger Glow on Hover */
-    box-shadow: 0px 0px 20px rgba(229, 115, 115, 1), 
-                0px 0px 40px rgba(229, 115, 115, 0.8),
-                0px 0px 60px rgba(229, 115, 115, 0.6);
-}
-
-/* Profile Image */
-.profileImage {
+    box-shadow: 0 0 15px rgba(229, 115, 115, 0.8),
+                0 0 30px rgba(229, 115, 115, 0.6),
+                0 0 50px rgba(229, 115, 115, 0.4);
+  }
+  
+  .irregularShape:hover {
+    transform: scale(1.03);
+    background: rgba(229, 115, 115, 0.8);
+    box-shadow: 0 0 25px rgba(229, 115, 115, 1),
+                0 0 45px rgba(229, 115, 115, 0.8),
+                0 0 65px rgba(229, 115, 115, 0.6);
+  }
+  
+  .profileImage {
     width: 100%;
     height: 100%;
-    scale: 1.29;
+    scale: 1.3;
     object-fit: cover;
     border-radius: 50%;
     position: relative;
-    top: -42px;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Text Section */
-.landingText {
+    top: -48px;
+    transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+  }
+  
+  /* Text Section */
+  .landingText {
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .landingText h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .landingText h2 span {
+    color: #e57373;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .landingText h2 span:hover {
+    color: crimson;
+  }
+  
+  .landingText p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* About Me Button */
+  .aboutMeBtn {
     margin-top: 20px;
-    transition: all 0.5s ease-in-out;
-}
-/* About Me Button */
-.aboutMeBtn {
-    margin-top: 15px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: #E57373;
+    background-color: #e57373;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.aboutMeBtn:hover {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .aboutMeBtn::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .aboutMeBtn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .aboutMeBtn:hover {
     background-color: crimson;
     transform: scale(1.05);
-}
-#landingBTNS{
-    display: flex;
-}
-
-.landingText h2 {
-    font-size: 42px;
-    font-weight: bold;
-    color: black;
-    transition: color 0.3s ease-in-out;
-}
- 
-.landingText h2 span {
-    color: #E57373; /* Lighter Crimson */
-    text-decoration:underline;
-}
-
-.landingText p {
-    font-size: 24px;
-    font-weight: 500;
-    color: #555;
-    margin-top: 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-/* .landingText span {
-   
-} */
-
-/* Social Media Icons */
-.socialIcons {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-}
-
-.socialIcons a {
-    color: black;
-    font-size: 30px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.socialIcons a:hover {
-    color: #E57373;
-    transform: scale(1.2);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    .profileImage{
-        top: -39px;
-    }
+  }
+  
+  /* Animations */
+  @keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
     .landingPageContainer {
-              flex-direction: column;
-        gap: 0;
-        margin-top: 70px;
-        height: 100vh;
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 15px;
     }
+  
     .shapeContainer {
-        width: 280px;
-        height: 280px;
+      width: 280px;
+      height: 280px;
     }
-
+  
     .landingText h2 {
-        font-size: 34px;
+      font-size: 36px;
     }
-
+  
     .landingText p {
-        font-size: 20px;
+      font-size: 20px;
     }
-
-    .socialIcons a {
-        font-size: 30px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .landingPageContainer {
+      gap: 20px;
+      padding: 20px 10px;
     }
-}
+  
+    .shapeContainer {
+      width: 240px;
+      height: 240px;
+    }
+  
+    .profileImage {
+      top: -39px;
+    }
+  
+    .landingText h2 {
+      font-size: 28px;
+    }
+  
+    .landingText p {
+      font-size: 18px;
+    }
+  
+    .aboutMeBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .shapeContainer {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .landingText h2 {
+      font-size: 24px;
+    }
+  
+    .landingText p {
+      font-size: 16px;
+    }
+  }

@@ -5,6 +5,7 @@ import Footer from "./components/jsx/Footer";
 import About from "./components/jsx/About";
 import Skills from "./components/jsx/Skills";
 import Project from "./components/jsx/Project";
+import Contact from "./components/jsx/Contact";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/About" element={<About/>}/>
             <Route path="/Skills" element={<Skills/>}/>
             <Route path="/Project" element={<Project/>}/>
+            <Route path="/Contact" element={<Contact/>}/>
           </Routes>
           <Footer/>
         </Router>

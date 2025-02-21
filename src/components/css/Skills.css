@@ -1,206 +1,269 @@
+/* Skills Section */
 .skills-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 10px 15px;
+    gap: 40px;
+    padding: 80px 20px;
     min-height: 100vh;
-}
-
-/* Centering animSection */
-.animSection {
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content */
-    justify-content: center; 
-    text-align: center;
-}
-
-/* Centering text section */
-.sectionSkillText {
-    /* padding: 20px 40px; */
-    border-radius: 10px;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-}
-.skills-text
-{
-    background: white;
-    padding: 20px 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
+   
+    overflow: hidden;
   }
-  .skills-list{
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .problem-solving { background-color: #FFD700; color: black; } /* Gold */
-  .teamwork { background-color: #008080; } /* Teal */
-  .communication { background-color: #FF5733; } /* Red-Orange */
-  .time-management { background-color: #6A0DAD; } /* Purple */
-  .adaptability { background-color: #228B22; } /* Forest Green */
   
-  .skills-list div {
+  /* Animation Section */
+  .animSection {
+    width: 100%;
+    max-width: 400px;
     display: flex;
-    gap: 4px;
+    justify-content: center;
     align-items: center;
-    
-    font-weight: bold;
-    
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
+    animation: fadeIn 1s ease-out;
   }
-  .c 
-  {
-     background-color: #A8B9CC; 
-    }
-  .cpp { background-color: #00599C; }
-  .html { background-color: #E34F26; }
-  .css { background-color: #1572B6; }
-  .bootstrap { background-color: #7952B3; }
-  .js { background-color: #F7DF1E; color: black; }
-  .java { background-color: #007396; }
-  .react { background-color: #61DAFB; color: black; }
-  .express { background-color: #444; }
-  .node { background-color: #339933; }
-  .mysql { background-color: #4479A1; }
-  .dbms { background-color: #FF9900; }
-/* Skills Animation Container */
-.skills-container {
+  
+  /* Skills Container */
+  .skills-container {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Central Skill Circle */
-.central-circle {
+  }
+  
+  /* Central Circle */
+  .central-circle {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: #222;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 24px;
     border-radius: 50%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Orbit Paths */
-.orbit {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+  }
+  
+  .central-circle:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Orbit Paths */
+  .orbit {
     position: absolute;
-    border: 2px solid rgb(24, 24, 24);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Different Orbit Sizes */
-.orbit-1 {
-    width: 140px;
-    height: 140px;
-}
-
-.orbit-2 {
-    width: 200px;
-    height: 200px;
-}
-
-.orbit-3 {
-    width: 260px;
-    height: 260px;
-}
-
-/* Rotating Container */
-.orbit-container {
-    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rotate 8s linear infinite;
-}
-
-/* Different speeds for each orbit */
-.orbit-1 .orbit-container {
-    animation-duration: 5s;
-}
-
-.orbit-2 .orbit-container {
-    animation-duration: 7s;
-}
-
-.orbit-3 .orbit-container {
-    animation-duration: 9s;
-}
-
-/* Orbit Animations */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Skill Circles */
-.skill-circle {
+    top: 50%;
+    left: 50%;
+    border: 2px dashed rgba(24, 24, 24, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+  }
+  
+  .orbit-1 {
+    width: 160px;
+    height: 160px;
+    animation-duration: 6s;
+  }
+  
+  .orbit-2 {
+    width: 240px;
+    height: 240px;
+    animation-duration: 8s;
+  }
+  
+  .orbit-3 {
+    width: 320px;
+    height: 320px;
+    animation-duration: 12s;
+  }
+  
+  /* Skill Circles */
+  .skill-circle {
     position: absolute;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     color: white;
     display: flex;
-    font-weight: bold;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .skill-circle:hover {
+    transform: scale(1.2) translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .skill-tooltip {
+    position: absolute;
+    bottom: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .skill-circle:hover .skill-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Rotation Animation */
+  @keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  /* Text Section */
+  .sectionSkillText {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .skills-text {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  .skills-heading {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
     text-align: center;
-    padding: 2px;
-    white-space: nowrap;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  .skills-description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .js, .react { color: black; }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
     .skills-section {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .animSection, .sectionSkillText {
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .animSection, .sectionSkillText {
         margin-top: 50px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
+      }
+    .skills-section{
+        margin-top: 50px;
+    }
+    .skills-container {
+      width: 280px;
+      height: 280px;
     }
 
-    /* Adjust skill circles for better fit */
     .skill-circle {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5rem;
-        padding: 1px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
     }
-}
+  
+    .central-circle {
+      width: 80px;
+      height: 80px;
+      font-size: 20px;
+    }
+  
+    .skills-heading {
+      font-size: 24px;
+    }
+  
+    .skill-item {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-container {
+      width: 240px;
+      height: 240px;
+    }
+  
+    .skill-circle {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+  
+    .central-circle {
+      width: 70px;
+      height: 70px;
+      font-size: 18px;
+    }
+  
+    .skills-heading {
+      font-size: 22px;
+    }
+  
+    .skills-description {
+      font-size: 14px;
+    }
+  }
