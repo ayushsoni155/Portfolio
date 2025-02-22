@@ -20,7 +20,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
-  // Detect screen size change
   useEffect(() => {
     const handleResize = () => {
       const smallScreen = window.innerWidth <= 768;
@@ -32,10 +31,8 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Toggle menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Close menu and scroll to top
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,7 +44,7 @@ const Header = () => {
         {/* Logo */}
         <div className="logo">
           <Link to="/" onClick={handleLinkClick}>
-            <h2>Ayush Soni</h2>
+            <img src="/Logo.png" alt="Ayush Soni" className="logo-image" />
           </Link>
         </div>
 

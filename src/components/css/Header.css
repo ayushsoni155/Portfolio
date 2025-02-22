@@ -6,14 +6,14 @@ header {
   z-index: 9999;
   backdrop-filter: blur(1px);
   color: rgb(24, 24, 24);
-  padding: 15px 30px;
+  padding: 0px 10px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
 header.scrolled {
-  background: hsla(34, 41%, 93%, 1);
-  padding: 10px 30px;
+  background: linear-gradient(135deg, #f5efe7 0%, #e0f7fa 50%, #f3e5f5 100%);
+  padding: 0px 10px;
 }
 
 .admin-navbar {
@@ -25,20 +25,21 @@ header.scrolled {
 }
 
 /* Logo Section */
-.logo h2 {
+.logo {
   margin: 0;
-  font-size: 28px;
-  font-weight: 700;
-  color: #e57373;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .logo a {
   text-decoration: none;
 }
 
-.logo h2:hover {
-  color: crimson;
+.logo-image {
+  height: 60px; /* Adjust based on your logo’s size */
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-image:hover {
   transform: scale(1.05);
 }
 
@@ -89,7 +90,7 @@ header.scrolled {
 }
 
 .menu-icon:hover {
-  color: crimson;
+  color: #dc143c;
   transform: rotate(90deg);
 }
 
@@ -99,13 +100,12 @@ header.scrolled {
   align-content: center;
   align-items: center;
   position: fixed;
-  top:0px;
-
+  top: 0px;
   right: -100%;
   height: 100vh;
   width: 100%;
-  background: #f28e8e;
-  color: white;
+  background: linear-gradient(135deg, #f5efe7 0%, #e0f7fa 50%, #f28e8e 100%);
+  color: #333;
   padding: 80px 20px 20px;
   transition: right 0.4s ease-in-out;
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
@@ -146,7 +146,7 @@ header.scrolled {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  color: white;
+  color: #333;
   text-decoration: none;
   font-size: 28px;
   font-weight: 600;
@@ -160,7 +160,7 @@ header.scrolled {
 }
 
 .side-nav ul li a:hover {
-  color: rgb(24, 24, 24);
+  color: #e57373;
   transform: translateX(-5px);
 }
 
@@ -179,8 +179,8 @@ header.scrolled {
     padding: 6px 10px;
   }
 
-  .logo h2 {
-    font-size: 24px;
+  .logo-image {
+    height: 36px;
   }
 }
 
@@ -203,8 +203,8 @@ header.scrolled {
 }
 
 @media screen and (max-width: 480px) {
-  .logo h2 {
-    font-size: 20px;
+  .logo-image {
+    height: 32px;
   }
 
   .menu-icon {
@@ -226,8 +226,8 @@ header.scrolled {
 }
 
 @media screen and (max-width: 360px) {
-  .logo h2 {
-    font-size: 18px;
+  .logo-image {
+    height: 28px;
   }
 
   .menu-icon {

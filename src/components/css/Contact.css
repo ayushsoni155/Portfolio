@@ -1,36 +1,37 @@
 /* Contact Container */
 .contact-container {
-  margin-top: 50px;
   padding: 80px 20px;
-  text-align: center;
- 
   min-height: 100vh;
   display: flex;
+  margin-top: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Heading */
 .contact-heading {
-  font-size: 32px;
+  font-size: 36px;
   color: #333;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  animation: fadeInDown 0.8s ease-out;
+  animation: fadeInDown 1s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 .heading-icon {
+  font-size: 32px;
   color: #e57373;
-  font-size: 28px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .contact-heading:hover .heading-icon {
-  transform: rotate(15deg);
+  transform: rotate(20deg);
 }
 
 /* Description */
@@ -39,46 +40,81 @@
   color: #777;
   margin-bottom: 40px;
   max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 12px;
+  animation: fadeIn 1.2s ease-out;
+  z-index: 1;
 }
 
 /* Contact Grid */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   width: 100%;
+  z-index: 1;
 }
 
 /* Contact Card */
 .contact-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(229, 115, 115, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: cardFloat 1s ease-out forwards;
 }
 
 .contact-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(229, 115, 115, 0.2);
 }
 
+/* Wave Effect Inside Card */
+.wave-effect {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"%3E%3Cpath fill="%23e57373" fill-opacity="0.1" d="M0 80 Q50 60, 100 80 T200 80 V100 H0 Z" /%3E%3C/svg%3E');
+  background-size: 200px 100px;
+  animation: waveRipple 4s infinite ease-in-out;
+  z-index: -1;
+}
+
+.contact-card:hover .wave-effect {
+  bottom: -20%;
+}
+
+@keyframes waveRipple {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Contact Icon */
 .contact-icon {
-  font-size: 36px;
+  font-size: 38px;
   color: #e57373;
   margin-bottom: 15px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
 }
 
 .contact-card:hover .contact-icon {
   transform: scale(1.1);
+  filter: drop-shadow(0 3px 6px rgba(229, 115, 115, 0.3));
 }
 
+/* Card Text */
 .contact-card h3 {
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .contact-card p {
@@ -95,97 +131,58 @@
 }
 
 .contact-card a:hover {
-  color: crimson;
+  color: #d81b60;
 }
 
 /* Animations */
-.fadeIn {
-  opacity: 0;
-  animation: fadeInAnim 0.8s ease-out forwards;
-}
-
 @keyframes fadeInDown {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInAnim {
+@keyframes fadeIn {
   0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardFloat {
+  0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .contact-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .contact-container {
     padding: 60px 15px;
+    background-size: 200px 100px;
   }
-
   .contact-heading {
-    font-size: 28px;
+    font-size: 30px;
   }
-
   .heading-icon {
-    font-size: 24px;
+    font-size: 26px;
   }
-
   .contact-description {
     font-size: 16px;
-  }
-
-  .contact-card h3 {
-    font-size: 18px;
-  }
-
-  .contact-card p {
-    font-size: 14px;
-  }
-
-  .contact-icon {
-    font-size: 32px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-container {
     padding: 40px 10px;
+    background-size: 150px 75px;
   }
-
   .contact-heading {
-    font-size: 24px;
+    font-size: 26px;
   }
-
-  .heading-icon {
-    font-size: 20px;
-  }
-
-  .contact-description {
-    font-size: 14px;
-  }
-
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .contact-card {
-    padding: 15px;
-  }
-
-  .contact-icon {
-    font-size: 28px;
-  }
-
-  .contact-card h3 {
-    font-size: 16px;
-  }
-
-  .contact-card p {
-    font-size: 13px;
   }
 }

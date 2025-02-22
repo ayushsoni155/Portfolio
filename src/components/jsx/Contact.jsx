@@ -15,25 +15,26 @@ const Contact = () => {
   return (
     <section className="contact-container">
       <h2 className="contact-heading">
-        <FaEnvelope className="heading-icon" /> Get in Touch
+        <FaEnvelope className="heading-icon" /> Say Hello!
       </h2>
-      <p className="contact-description fadeIn">
-        Feel free to reach out to me through any of these channels. I’m excited to connect!
+      <p className="contact-description">
+        Drop me a line through these gentle waves—I’d love to chat!
       </p>
       <div className="contact-grid">
         {contactDetails.map((detail, index) => (
-          <div className="contact-card fadeIn" key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+          <div className="contact-card" key={index} style={{ animationDelay: `${index * 0.15}s` }}>
             <div className="contact-icon">{detail.icon}</div>
             <h3>{detail.label}</h3>
             <p>
               {detail.link.startsWith("#") ? (
                 detail.value
               ) : (
-                <a href={detail.link} target={detail.label === "Email" || detail.label === "Phone" ? "_self" : "_blank"} rel="noopener noreferrer">
+                <a href={detail.link} target="_blank" rel="noopener noreferrer">
                   {detail.value}
                 </a>
               )}
             </p>
+            <div className="wave-effect"></div>
           </div>
         ))}
       </div>
