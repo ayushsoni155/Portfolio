@@ -10,13 +10,11 @@ const About = () => {
         <img src="./ayushImg.jpg" alt="Profile" className="profile-img" />
         <h2 id="mainName">Ayush Soni</h2>
         <p>
-          I'm <b>Ayush Soni</b>, from <b>Dewas</b>. I come from a supportive family—my father, <b>Yogesh Soni</b>, works in a private company, and my mother, <b>Arti Soni</b>, is a teacher.
+          I’m Ayush Soni, a <b>B.Tech student in Computer Science Engineering</b> at Mahakal Institute of Technology, Ujjain. I’m from Dewas and love <b>building software, working on backend systems, and solving problems</b>. I’ve learned a lot from my studies and projects, and I’m good at <b>coding and finding smart solutions</b>.
           <br /><br />
-          Currently, I'm pursuing a <b>B.Tech in Computer Science Engineering</b> at <b>Mahakal Institute of Technology</b>. I have a strong interest in <b>software development, backend engineering, and problem-solving</b>. Apart from coding, I love <b>hitting the gym, listening to music, and watching movies</b>.
+          I want to work at a great company where I can use my skills to do <b>important work</b>. I’m hardworking, quick to learn, and ready to take on challenges. In my free time, I like going to the gym, listening to music, and watching movies.
           <br /><br />
-          I’m always up for <b>learning new things and challenging myself</b>. My goal is to <b>land a high-paying tech job and build something impactful</b>.
-          <br /><br />
-          Excited to see where this journey takes me! 🚀
+          My goal is to get a <b>well-paying tech job</b> and grow into a strong professional.
         </p>
       </div>
 
@@ -36,7 +34,7 @@ const About = () => {
             <h3>Secondary (M.P. Board)</h3>
             <p>Morning Star School, Dewas (M.P)<br />2019 - 2020</p>
           </div>
-        </div>
+        </div> 
 
         {/* Hobbies Section */}
         <div className="hobbies">

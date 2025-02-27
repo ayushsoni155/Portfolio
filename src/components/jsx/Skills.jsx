@@ -1,8 +1,9 @@
 import React from "react";
 import "../css/Skills.css";
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaJava, FaDatabase, FaNodeJs } from "react-icons/fa";
-import { SiMysql, SiExpress, SiC, SiCplusplus } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaJs, FaReact, FaJava, FaDatabase, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiMysql, SiExpress, SiC, SiCplusplus, SiSpringboot, SiFlask } from "react-icons/si";
 import { MdLightbulb, MdPeople, MdAccessTime, MdAutorenew, MdChat } from "react-icons/md";
+import { AiOutlineRobot } from "react-icons/ai"; // For AI APIs and ML Model
 
 const skillsData = [
   { icon: <SiC />, color: "#A8B9CC", orbit: 1, name: "C" },
@@ -13,10 +14,16 @@ const skillsData = [
   { icon: <FaJs />, color: "#F7DF1E", orbit: 2, name: "JavaScript" },
   { icon: <FaReact />, color: "#61DAFB", orbit: 3, name: "React" },
   { icon: <SiExpress />, color: "#222222", orbit: 3, name: "Express" },
-  { icon: <FaNodeJs />, color: "#8CC84B", orbit: 3, name: "Node.js" },
+  { icon: <FaNodeJs />, color: "#3C873A", orbit: 3, name: "Node.js" }, // Updated color
   { icon: <FaJava />, color: "#F89820", orbit: 3, name: "Java" },
   { icon: <SiMysql />, color: "#4479A1", orbit: 3, name: "MySQL" },
   { icon: <FaDatabase />, color: "#4B8BBE", orbit: 3, name: "DBMS" },
+  { icon: <SiSpringboot />, color: "#6DB33F", name: "SpringBoot" }, // New
+  { icon: <SiFlask />, color: "#00A98F",  name: "Flask" }, // New
+  { icon: <FaPython />, color: "#306998",  name: "Python" }, // New
+  { icon: <AiOutlineRobot />, color: "#8A2BE2", name: "ML Model" }, // New
+  { icon: <AiOutlineRobot />, color: "#FF6347", name: "AI APIs" }, // New
+  { icon: <FaDatabase />, color: "#46E3B7", name: "Render" }, // New (using FaDatabase as placeholder)
 ];
 
 const softSkills = [

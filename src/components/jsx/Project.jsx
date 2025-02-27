@@ -4,6 +4,13 @@ import { FaExternalLinkAlt, FaCertificate, FaAward } from "react-icons/fa";
 
 const projects = [
   {
+    "title": "SkillSyncAI - Placement Preparation App",
+    "description": "A smart quiz platform for students to test their knowledge, practice skills, and track progress, featuring a self-made machine learning model that predicts placement probability based on performance.",
+    "image": "skillsyncaiSS.png",
+    "link": "https://skillsyncai.vercel.app/",
+    "technologies": ["HTML","CSS","React","Java - SpringBoot","Node.js","Flask","Python","ML Model","AI APIs","MySQL","Vercel","Render"]
+  },
+  {
     title: "ByteWise - Student Portal",
     description: "An eCommerce platform for engineering students to access subject notes, buy practical files, and explore free courses with a seamless user experience.",
     image: "bytewiseSS.png",
@@ -51,6 +58,13 @@ const getTechColor = (tech) => {
     "CSS": "#1572B6",
     "JavaScript": "#F7DF1E",
     "HTML": "#E34F26",
+    "Java - SpringBoot": "#6DB33F",  // SpringBoot’s official green
+    "Node.js": "#3C873A",           // Node.js’s dark green
+    "Flask": "#00A98F",             // Teal, modern and clean for Flask
+    "Python": "#306998",            // Python’s blue from its logo
+    "ML Model": "#8A2BE2",          // Vibrant purple for custom ML work
+    "AI APIs": "#FF6347",           // Tomato red, bold for AI
+    "Render": "#46E3B7"             // Bright cyan, matches Render’s modern vibe
   };
   return colors[tech] || "#888888";
 };
