@@ -39,6 +39,9 @@ const certificates = [
   { title: "JavaScript - Beginners to Advanced", image: "javascript.png", link: "https://drive.google.com/file/d/1ad8dDtqb61C9PvvWV9hnl6W4INqHm9gh/view?usp=sharing" },
   { title: "Web Designing using HTML5, CSS3, and Bootstrap", image: "webD.png", link: "https://drive.google.com/file/d/1BLsZHV2TAGpL-35kB-ZOr1MuEoI61M7q/view?usp=sharing" },
   { title: "Data Science Workshop and Hands-on", image: "datascience.jpg", link: "https://drive.google.com/file/d/1vp0r-n-rDzBGZdi2IGlSfBvBHbfRDY2e/view?usp=sharing" },
+  { title: "Google Cloud Arcade Facilitator Program", image: "gcsb.png", link: "https://drive.google.com/file/d/1jOfg4OOulBLO9EOoMetIymObFzhqyLcC/view?usp=drive_link" } 
+  { title: "Machine Learning Workshop and Hands-on", image: "ml.jpg", link: "https://drive.google.com/file/d/1jWaSVorhwz6RsfIPeKgnSKIKBHHeohJV/view?usp=sharing" }
+{ title: "ProjectExpo 4.0 1st Price", image: "expo.jpg", link: "https://drive.google.com/file/d/1jTXJusBrRDsePeQ26ijTN0zy7MBQ8Hl5/view?usp=sharing" }
 ];
 
 const offers = [
