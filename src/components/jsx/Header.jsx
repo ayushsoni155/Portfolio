@@ -64,7 +64,7 @@ const Header = () => {
               <li><Link to="/Skills" onClick={handleLinkClick}><FaCode className="nav-icon" /> Skills</Link></li>
               <li><Link to="/Project" onClick={handleLinkClick}><FaProjectDiagram className="nav-icon" /> Projects</Link></li>
               <li><Link to="/Contact" onClick={handleLinkClick}><FaEnvelope className="nav-icon" /> Contacts</Link></li>
-              <li><Link to="/Product" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
+              <li><Link to="https://drive.google.com/file/d/1jflOScOx8lhOwOWP_4BMVyJd-AMAd9cW/view?usp=drive_link" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
             </ul>
           </nav>
         )}
@@ -78,7 +78,7 @@ const Header = () => {
               <li><Link to="/Skills" onClick={handleLinkClick}><FaCode className="nav-icon" /> Skills</Link></li>
               <li><Link to="/Project" onClick={handleLinkClick}><FaProjectDiagram className="nav-icon" /> Projects</Link></li>
               <li><Link to="/Contact" onClick={handleLinkClick}><FaEnvelope className="nav-icon" /> Contacts</Link></li>
-              <li><Link to="/Product" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
+              <li><Link to="https://drive.google.com/file/d/1jflOScOx8lhOwOWP_4BMVyJd-AMAd9cW/view?usp=drive_link" onClick={handleLinkClick}><FaFileAlt className="nav-icon" /> CV</Link></li>
             </ul>
           </nav>
         )}
